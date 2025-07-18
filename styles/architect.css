@@ -49,7 +49,7 @@ main>section{
 
 
 /* banner style */
-.banner-title{
+.section-title{
     font-size: 3rem;
     font-weight: bold;
 }
@@ -107,6 +107,57 @@ main{
     color: #FF900E;
 }
 
+/* some facts releted  */
+.facts-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    
+}
+.fact-card {
+    border: 1px solid #FF900E;
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    /* text-align: center; */
+    
+   
+}
+.fact-number{
+     font-size: 2.8rem;
+    font-weight: 600px;
+    margin-bottom: 0;
+    margin-top: 0;
+
+}
+.fact-name{
+    font-size: 1.5rem;
+    font-weight: 600px;
+
+}
+.fact-description{
+    max-width: 540px;
+
+}
+.sponsor-info{
+    max-width: 540px;
+    margin: 50px auto;
+    /* text-align: center; */
+    text-align: center;
+}
+.sponsor-companies{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+.sponsor-companies img{
+    filter: grayscale(100%);
+
+}
+
+
+
 
 
 
@@ -120,11 +171,23 @@ main{
         flex-direction: column;
     }
     
-    .team-img-container{
+    .team-img-container ,
+     .facts-container,
+     .sponsor-companies
+     {
         flex-direction: column;
         grid-template-columns: repeat(1,1fr);
         margin: 0 auto;
     }
+     .sponsor-companies,.facts-container, .team-img-container  {
+        justify-items: center;
+        gap: 24px;
+        
+        /* margin-left: 60px; */
+    }
+  
+    
+    
     .our-feature{
         /* margin: 0 auto; */
         /* text-align: left; */
@@ -135,10 +198,10 @@ main{
         padding-right: 50px;
     }
 
-
+}
     /* medium style */
     
-}
+
 @media screen and (min-width:576px) and (max-width:992px) {
     .banner, 
     .navber,
@@ -161,6 +224,13 @@ main{
     }
     .teams{
         padding-right: 50px;
+    }
+    .sponsor-companies , .facts-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 50px;
+        justify-items: center;
+
     }
     
 }
@@ -188,8 +258,5 @@ main{
         align-items: center;
     }
     
-
-
-
 
 }
